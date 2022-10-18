@@ -1,4 +1,4 @@
 (
-cd github.com/inab/oeb_general_docs &&
+cd github.com/inab/openEBench_vre &&
     rst-lint --level warning --format json .
 )

@@ -2,11 +2,8 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: 1.7.0_no_kubectl
+      branch: release/1.7.4
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/inab/oeb_general_docs:
-      branch: master
-      repo: https://github.com/inab/oeb_general_docs
     github.com/inab/openEBench_vre:
       branch: master
       repo: https://github.com/inab/openEBench_vre
@@ -18,48 +15,60 @@ sqa_criteria:
     repos:
       github.com/inab/openEBench_vre git:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-gold-millipede.sh
-        container: qc.acc_freaky-blue-grasshopper
+        - /usr/bin/env sh .sqa/script.bumpy-fuchsia-gerbil.sh
+        container: qc.acc_flimsy-blue-centipede
   QC.Doc:
     repos:
-      github.com/inab/oeb_general_docs find_doc_files.py:
+      github.com/inab/openEBench_vre find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-grey-monkey.sh
-        container: qc.doc_ready-magnolia-wolf
-      github.com/inab/oeb_general_docs git:
+        - /usr/bin/env sh .sqa/script.jumpy-brass-whippet.sh
+        container: qc.doc_tacky-champagne-cougar
+      github.com/inab/openEBench_vre git:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-beige-bordeaux.sh
-        container: qc.doc_craggy-celadon-pig
-      github.com/inab/oeb_general_docs markdownlint:
+        - /usr/bin/env sh .sqa/script.pasty-pumpkin-booby.sh
+        container: qc.doc_messy-heliotrope-drever
+      github.com/inab/openEBench_vre markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-mauve-moose.sh
-        container: qc.doc_goopy-mauve-rattlesnake
-      github.com/inab/oeb_general_docs restructuredtext-lint:
+        - /usr/bin/env sh .sqa/script.frumpy-charcoal-hornet.sh
+        container: qc.doc_flabby-zucchini-snake
+      github.com/inab/openEBench_vre restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-sepia-kiwi.sh
-        container: qc.doc_shaky-brown-schnauzer
+        - /usr/bin/env sh .sqa/script.queasy-cream-cuscus.sh
+        container: qc.doc_foggy-silver-newt
   QC.Lic:
     repos:
       github.com/inab/openEBench_vre licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-carmine-magpie.sh
-        container: qc.lic_cheeky-peach-saola
+        - /usr/bin/env sh .sqa/script.lanky-heliotrope-caracal.sh
+        container: qc.lic_trippy-maroon-woodpecker
   QC.Sec:
     repos:
       github.com/inab/openEBench_vre bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-emerald-wolverine.sh
-        container: qc.sec_bumpy-turquoise-eagle
+        - /usr/bin/env sh .sqa/script.hazy-persimmon-tzu.sh
+        container: qc.sec_silly-white-chipmunk
   QC.Sty:
     repos:
       github.com/inab/openEBench_vre flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-orchid-lynx.sh
-        container: qc.sty_snappy-cornflower-coati
+        - /usr/bin/env sh .sqa/script.sunny-violet-gharial.sh
+        container: qc.sty_stuffy-beige-stoat
+      github.com/inab/openEBench_vre hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.hilly-thistle-uguisu.sh
+        container: qc.sty_smelly-ochre-spider
+      github.com/inab/openEBench_vre jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.tacky-flax-gharial.sh
+        container: qc.sty_hazy-taupe-hare
+      github.com/inab/openEBench_vre stylelint:
+        commands:
+        - /usr/bin/env sh .sqa/script.sunny-seashell-quoll.sh
+        container: qc.sty_muzzy-lemon-devil
   QC.Ver:
     repos:
       github.com/inab/openEBench_vre get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-red-drever.sh
-        container: qc.ver_sleazy-chestnut-angelfish
+        - /usr/bin/env sh .sqa/script.hilly-asparagus-wolverine.sh
+        container: qc.ver_cranky-bistre-frigatebird
 timeout: 1800
